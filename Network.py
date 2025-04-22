@@ -114,12 +114,15 @@ if __name__ == "__main__":
     network.addLayer(8)
     network.addLayer(2)
 
-    network.init()
 
     dataset = loadDataset("data.csv")
+    network.init()
+
+    network.loadWeightsAndBiases("weights_and_biases.json")
+
 
     # Training parameters
-    learning_rate = 0.00005
+    learning_rate = 0.0006
     epochs = 10000
 
     # Training loop
@@ -131,8 +134,8 @@ if __name__ == "__main__":
         average_cost = network.calculateAverageCost(dataset)
         print(f"Epoch {epoch + 1}, Average Cost: {average_cost}")
 
-        # Save weights and biases every 100 epochs
-        if (epoch + 1) % 100 == 0:
+        # Save weights and biases every 10 epochs
+        if (epoch + 1) % 10 == 0:
             network.saveWeightsAndBiases("weights_and_biases.json")
 
     # Save final weights and biases
