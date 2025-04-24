@@ -36,7 +36,7 @@ neuralNetwork = Network()
 
 neuralNetwork.addInputLayer(6)
 neuralNetwork.addLayer(8)
-neuralNetwork.addLayer(8)
+neuralNetwork.addLayer(4)
 neuralNetwork.addLayer(2)
 
 neuralNetwork.init()
@@ -49,6 +49,6 @@ old = []
 for node in neuralNetwork.layers[-1].nodes:
     old.append(node.output)
 
-print(f"you are {int(old[0] * 130)} years and {int(old[1] * 365)} days old")
+print(f"you are {int(old[0] * 130)} years old")
 print("unc.")
 

@@ -111,7 +111,7 @@ if __name__ == "__main__":
 
     network.addInputLayer(6)
     network.addLayer(8)
-    network.addLayer(8)
+    network.addLayer(4)
     network.addLayer(2)
 
 
@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
 
     # Training parameters
-    learning_rate = 0.0006
+    learning_rate = 0.01
     epochs = 10000
 
     # Training loop
